@@ -16,6 +16,7 @@ defmodule Cart do
     cart = %{contents: [item | Map.get(cart, :contents, [])]}
   end
   def handle(cart, {:item_removed, item}) do
+    cart =  %{contents: [Map.delete(cart, item)]}
   end
   def handle(cart, {:show_contents}) do
     for c <- cart.contents, do: c

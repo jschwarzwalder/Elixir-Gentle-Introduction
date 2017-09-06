@@ -27,4 +27,10 @@ defmodule CartTest do
     in_cart = Cart.handle(cart, {:show_contents})
     assert in_cart == [:item1]
   end
+
+  test "remove item" do
+    cart = %{contents: [:item1, :item2]}
+    cart = Cart.handle(cart, {:item_removed, :item1})
+    assert cart.contents == [:item2]
+  end
 end
