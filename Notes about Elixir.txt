@@ -1,0 +1,39 @@
+Elixir
+by Rob Martin
+
+Open - iex
+
+Inspiration is Ruby and Erlang(Samsung)
+Elm (Front end)
+
+object oriented vs functional/declaritive
+lambda capitalist (9th grade algebra) solve haulting problem 1935
+typed theory (I know what something is)
+Set theory (we can put them into sets)
+category theory (we can take our sets and we can generalize things we do to sets)
+
+impartivie - we tell comptuer what to do
+declaritive - we describe relationships and ask computer to tell us about it. 
+
+'list of charaters'
+"binary string of characters" - International characters like utf-8
+
+-----------------------------------
+'jumble'
+2
+3+3
+'jumble' == "jumble"
+'jumble' == to_charlist "jumble"
+"jumble" |> to_charlist
+'jumble' |> Enum.sort
+'jumble' |> Enum.shuffle
+for character <- 'jumble', do: IO.puts character
+for character <- 'jumble', do: IO.puts [character]
+for character <- 'jumble', do: character
+for c <- [106, 117, 109, 98, 108, 191], do: c
+for c <- [106, 117, 109, 98, 108, 191], do: IO.puts [c]
+x = 1
+// x = 2 will throw error. It knows x and can't reassign
+
+for c <- 'jumble' , do: Enum.member?('muljbe', c)
+
