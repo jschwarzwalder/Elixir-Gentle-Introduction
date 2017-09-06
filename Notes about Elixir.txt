@@ -61,3 +61,7 @@ Enum.filter words, fn word -> Enum.all? for c <- word, do: Enum.member?(tiles, c
  
 Enum.all? for c <- 'jumble' , do: Enum.member?('muljbe', c) //looks at list, if all are true returns true, else return false
 
+-----------------------------------------------
+
+mix new [project name]
+mix test //compile 

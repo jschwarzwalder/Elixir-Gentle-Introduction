@@ -1,0 +1,12 @@
+cart
+add peach
+add pen
+add candy (orange)
+add headphones
+add paper
+add pen II
+remove pen II
+add candy (red)
+add usb cord
+remove candy (red)
+add water bottle
