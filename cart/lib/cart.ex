@@ -13,6 +13,7 @@ defmodule Cart do
 
   """
   def handle(cart, {:item_added, :item}) do
+  cart = %{contents: [item]}
   end
   def handle(cart, {:item_removed, :item}) do
   end
