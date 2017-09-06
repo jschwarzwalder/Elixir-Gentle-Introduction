@@ -25,6 +25,6 @@ defmodule CartTest do
   test "show cart contents" do
     cart = %{contents: [:item1]}
     in_cart = Cart.handle(cart, {:show_contents})
-    assert in_cart == 'item1'
+    assert in_cart == [:item1]
   end
 end

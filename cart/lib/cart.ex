@@ -18,6 +18,6 @@ defmodule Cart do
   def handle(cart, {:item_removed, item}) do
   end
   def handle(cart, {:show_contents}) do
-    for c <- cart.contents, do: [c]
+    for c <- cart.contents, do: c
   end
 end
