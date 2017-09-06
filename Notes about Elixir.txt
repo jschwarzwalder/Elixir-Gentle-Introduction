@@ -68,3 +68,6 @@ cd [project name]
 mix test //compile and run tests
 
 (Use tests to make sure I understand)
+
+
+:[name] variable that's value is the same as the name of the variable called an atom
