@@ -36,4 +36,9 @@ x = 1
 // x = 2 will throw error. It knows x and can't reassign
 
 for c <- 'jumble' , do: Enum.member?('muljbe', c)
+for c <- 'jumble' , do: Enum.member?('mumble', c)
+
+word = 'jumble'
+tiles = 'mulbje'
+for c <- tiles, do: Enum.member?(word, c)
 
