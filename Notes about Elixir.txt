@@ -18,6 +18,9 @@ declaritive - we describe relationships and ask computer to tell us about it.
 'list of charaters'
 "binary string of characters" - International characters like utf-8
 
+We are doing pattern matching
+
+REPL
 -----------------------------------
 'jumble'
 2
@@ -41,4 +44,20 @@ for c <- 'jumble' , do: Enum.member?('mumble', c)
 word = 'jumble'
 tiles = 'mulbje'
 for c <- tiles, do: Enum.member?(word, c)
+
+{:ok, dict} = File.read("words.txt")
+
+#iex:break // if stuck in ...>  
+
+IO.puts dict
+
+words = dict |> String.split "\n"
+
+words = dict |> String.split("\n") |> Enum.map(fn(word) ->to_charlist word end)
+
+words |> Enum.count
+
+Enum.filter words, fn word -> Enum.all? for c <- word, do: Enum.member?(tiles, c) end
+ 
+Enum.all? for c <- 'jumble' , do: Enum.member?('muljbe', c) //looks at list, if all are true returns true, else return false
 
