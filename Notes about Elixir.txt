@@ -71,3 +71,9 @@ mix test //compile and run tests
 
 
 :[name] variable that's value is the same as the name of the variable called an atom
+
+handle/1 # takes 1 argument
+handle/2 # takes 2 arguments
+
+```iex -S mix``` #will load files into iex
+`iex() recompile`
