@@ -12,9 +12,12 @@ defmodule Cart do
       :world
 
   """
-  def handle(cart, {:item_added, :item}) do
-  cart = %{contents: [item]}
+  def handle(cart, {:item_added, item}) do
+    cart = %{contents: [item]}
   end
-  def handle(cart, {:item_removed, :item}) do
+  def handle(cart, {:item_removed, item}) do
+  end
+  def handle(cart, {:show_contents}) do
+    for c <- cart.contents, do: [c]
   end
 end
