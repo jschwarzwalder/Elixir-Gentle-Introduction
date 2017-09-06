@@ -20,7 +20,7 @@ declaritive - we describe relationships and ask computer to tell us about it.
 
 We are doing pattern matching
 
-REPL
+REPL (experiments)
 -----------------------------------
 'jumble'
 2
@@ -64,4 +64,7 @@ Enum.all? for c <- 'jumble' , do: Enum.member?('muljbe', c) //looks at list, if 
 -----------------------------------------------
 
 mix new [project name]
-mix test //compile 
+cd [project name]
+mix test //compile and run tests
+
+(Use tests to make sure I understand)
