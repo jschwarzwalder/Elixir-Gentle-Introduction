@@ -13,7 +13,7 @@ defmodule Cart do
 
   """
   def handle(cart, {:item_added, item}) do
-    cart = %{contents: [item]}
+    cart = %{contents: [item | Map.get(cart, :contents, [])]}
   end
   def handle(cart, {:item_removed, item}) do
   end
