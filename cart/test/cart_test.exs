@@ -7,7 +7,7 @@ defmodule CartTest do
 
   test "an empty cart is empty" do
     empty_cart = %{}
-    assert empty_cart = %{}
+    assert empty_cart == %{}
   end
 
   test "adds an item to a cart" do

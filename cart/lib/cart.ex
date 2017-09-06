@@ -12,6 +12,8 @@ defmodule Cart do
       :world
 
   """
-  def  do
-  #end
+  def handle(cart, {:item_added, :item}) do
+  end
+  def handle(cart, {:item_removed, :item}) do
+  end
 end
