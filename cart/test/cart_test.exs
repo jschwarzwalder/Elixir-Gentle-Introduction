@@ -33,4 +33,10 @@ defmodule CartTest do
     cart = Cart.handle(cart, {:item_removed, :item1})
     assert cart.contents == [:item2]
   end
+
+  test "adds duplicate item to an existing cart" do
+    cart = %{contents: [:item1]}
+    cart = Cart.handle(cart, {:item_added, :item1})
+    assert cart.contents == [:item1, :item1]
+  end
 end
