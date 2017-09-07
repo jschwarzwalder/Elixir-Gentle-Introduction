@@ -29,4 +29,11 @@ defmodule Cart do
   def handle(cart, {:show_contents}) do
     for c <- cart.contents, do: c
   end
+  def handle(cart, {:total}) do
+   total = Enum.count(cart.contents)
+   # total = Map.get(cart, :contents) |> Enum.count
+ end
+ def handle(cart, {:item_count, item}) do
+   count = Enum.filter(Map.get(cart, :contents), item)
+  end
 end

@@ -4,6 +4,7 @@ defmodule CartTest do
   # example cart
   # cart = %{contents: [:item1, :item2]}
   # cart.contents = [:item1, :item2]
+  # cart.start =
 
   test "an empty cart is empty" do
     empty_cart = %{}
@@ -39,4 +40,17 @@ defmodule CartTest do
     cart = Cart.handle(cart, {:item_added, :item1})
     assert cart.contents == [:item1, :item1]
   end
+
+  test "show total item in the cart" do
+      cart = %{contents: [:item1, :item2]}
+      total = Cart.handle(cart, {:total})
+      assert total == 2
+    end
+
+    test "get count of item in cart" do
+        cart = %{contents: [:item1, :item2, :item1, :item1]}
+        item_count = Cart.handle(cart, {:item_count, :item1})
+        assert item_count == 3
+      end
+
 end
